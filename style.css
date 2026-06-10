@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+
+body {
+  background: #0A192F;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  padding: 0 9%;
+  background: #081120;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: #2dd4bf;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #2dd4bf;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 28px;
+}
+
+.hero {
+  min-height: 680px;
+  padding: 90px 12%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: radial-gradient(circle at 80% 45%, #0f766e55, transparent 35%), #081120;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(45, 212, 191, 0.12);
+  color: #2dd4bf;
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  padding: 8px 18px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.hero h1,
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 58px;
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  max-width: 560px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+
+.btn {
+  display: inline-block;
+  background: #4DA6FF;
+  color: #04111f;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.btn.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #64748b;
+}
+
+
+.social-icons{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#ffffff;
+    font-size:22px;
+    text-decoration:none;
+    transition:all .3s ease;
+}
+
+.social-icons a:hover{
+    background:#2dd4bf;
+    color:#081329;
+    transform:translateY(-4px);
+}
+
+.hero-img {
+  text-align: center;
+}
+
+.hero-img img {
+  width: 360px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 2px solid #2dd4bf;
+  box-shadow: 0 0 80px rgba(45, 212, 191, 0.25);
+}
+
+.about,
+.section {
+  padding: 75px 12%;
+  border-top: 1px solid #1e293b;
+  background: #0f1a2b;
+}
+
+.section-title p {
+  color: #2dd4bf;
+  letter-spacing: 5px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #2dd4bf;
+  margin-top: 18px;
+  border-radius: 10px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 55px;
+}
+
+.about-content p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-top: 25px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stats div,
+.card,
+.project-card,
+.personality,
+.strengths,
+.swot {
+  background: #1e2b3d;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.stats h3 {
+  color: #2dd4bf;
+  font-size: 34px;
+  text-align: center;
+}
+
+.stats p {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.timeline {
+  border-left: 2px solid #2dd4bf;
+  margin-left: 25%;
+  padding-left: 40px;
+}
+
+.timeline div {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.timeline div::before {
+  content: "";
+  position: absolute;
+  left: -51px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: #2dd4bf;
+  border-radius: 50%;
+}
+
+.timeline span {
+  color: #2dd4bf;
+  font-weight: bold;
+}
+
+.timeline h3 {
+  color: white;
+  margin: 8px 0;
+}
+
+.timeline p {
+  color: #cbd5e1;
+}
+
+.skills-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 18px;
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+.card li,
+.card p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+.projects-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.project-card h3 {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.project-card span {
+  display: inline-block;
+  background: rgba(45, 212, 191, 0.12);
+  color: #4DA6FF;
+  padding: 6px 12px;
+  border-radius: 18px;
+  font-size: 12px;
+  margin: 12px 5px 0 0;
+}
+
+.mini-stats {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.mini-stats div {
+  background: #1e2b3d;
+  border: 1px solid #334155;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.mini-stats h4 {
+  color: white;
+}
+
+.mini-stats p {
+  color: #cbd5e1;
+}
+
+.profile-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 20px;
+}
+
+.personality h3 {
+  color: #2dd4bf;
+  font-size: 34px;
+}
+
+.personality h4 {
+  color: #2dd4bf;
+  margin-bottom: 18px;
+}
+
+.personality p,
+.swot p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.strengths h3,
+.swot h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.strengths p {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin: 14px 0 8px;
+}
+
+.strengths span {
+  color: #2dd4bf;
+}
+
+.strengths div {
+  height: 8px;
+  background: #334155;
+  border-radius: 20px;
+}
+
+.strengths b {
+  display: block;
+  height: 100%;
+  background: #2dd4bf;
+  border-radius: 20px;
+}
+
+.swot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.swot-grid div {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.swot-grid h4 {
+  color: #2dd4bf;
+  margin-bottom: 10px;
+}
+
+.roadmap {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  border-top: 2px solid #334155;
+  padding-top: 35px;
+}
+
+.roadmap span {
+  width: 28px;
+  height: 28px;
+  background: #2dd4bf;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.roadmap h3 {
+  color: white;
+  font-size: 16px;
+}
+
+.roadmap p {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 60px;
+  margin-top: 35px;
+}
+
+.contact-info p {
+  color: #cbd5e1;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+form input,
+form textarea {
+  background: #1e2b3d;
+  border: 1px solid #334155;
+  padding: 16px;
+  color: white;
+  border-radius: 8px;
+}
+
+form input:nth-child(3),
+form textarea,
+form button {
+  grid-column: span 2;
+}
+
+form textarea {
+  height: 140px;
+}
+
+form button {
+  background: #2dd4bf;
+  color: #04111f;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background: #081120;
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+  border-top: 1px solid #1e293b;
+}
+
+@media (max-width: 900px) {
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #081120;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero,
+  .about,
+  .skills-grid,
+  .projects-grid,
+  .mini-stats,
+  .profile-grid,
+  .roadmap,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1,
+  .section-title h2 {
+    font-size: 42px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline {
+    margin-left: 10px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form input:nth-child(3),
+  form textarea,
+  form button {
+    grid-column: span 1;
+  }
+}
